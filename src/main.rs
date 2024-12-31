@@ -12,10 +12,10 @@ use crate::digest::{sha256file, Sha256Value};
 #[derive(clap::Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 pub struct Args {
-    #[arg(short = 'l', long)]
+    #[arg(required = true)]
     left: Vec<PathBuf>,
 
-    #[arg(short = 'r', long)]
+    #[arg(last = true, required = true)]
     right: Vec<PathBuf>,
 }
 
