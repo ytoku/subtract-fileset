@@ -10,7 +10,7 @@ use walkdir::WalkDir;
 use crate::digest::{sha256file, Sha256Value};
 
 #[derive(clap::Parser, Debug)]
-#[command(author, version, about, long_about = None)]
+#[command(author, version, about = "List file path set: {LEFT} \\ {RIGHT}", long_about = None)]
 pub struct Args {
     #[arg(required = true)]
     left: Vec<PathBuf>,
